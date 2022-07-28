@@ -26,7 +26,6 @@ describe('Case 1', () => {
     });
   });
 
-  // TODO
   describe('printMessageUppercase', () => {
     // TODO
   });
