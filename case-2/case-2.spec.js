@@ -1,3 +1,5 @@
+import { fuzzBuzz, isTooBig, toUpperCase } from './case-2';
+
 describe('Case 2', () => {
   describe('toUpperCase', () => {
     it('should return a string in upper case', () => {
@@ -17,30 +19,67 @@ describe('Case 2', () => {
     });
   });
 
-  describe('fuzBuzz', () => {
+  describe('fuzzBuzz', () => {
+    beforeEach(() => {
+      jest.spyOn(console, 'log').mockImplementation((v) => v)
+    });
+
     it('should return "Fuzz" if value divided by 3', () => {
+      // setup
       const arr = [3];
-      expect(fuzBuzz(arr)).toBe('Fuzz');
+
+      // execute
+      fuzzBuzz(arr)
+
+      // check
+      expect(console.log).toHaveBeenCalledWith('Fuzz')
     });
 
     it('should return "Buzz" if value divided by 5', () => {
+      // setup
       const arr = [5];
-      expect(fuzBuzz(arr)).toBe('Buzz');
+
+      // execute
+      fuzzBuzz(arr)
+
+      // check
+      expect(console.log).toHaveBeenCalledWith('Buzz')
     });
 
     it('should return "FuzzBuzz" if value divided by 3 and 5', () => {
+      // setup
       const arr = [15];
-      expect(fuzBuzz(arr)).toBe('FuzzBuzz');
+
+      // execute
+      fuzzBuzz(arr)
+
+      // check
+      expect(console.log).toHaveBeenCalledWith('FuzzBuzz')
     });
 
     it('should return an empty string ', () => {
+      // setup
       const arr = [4];
-      expect(fuzBuzz(arr)).toBe('');
+
+      // execute
+      fuzzBuzz(arr)
+
+      // check
+      expect(console.log).toHaveBeenCalledWith('')
     });
 
     it('should return proper values for array of multiple numbers', () => {
-      const arr = [3, 4, 5, 15,];
-      expect(fuzBuzz(arr)).toBe('');
+      // setup
+      const arr = [3, 4, 5, 15];
+
+      // execute
+      fuzzBuzz(arr)
+
+      // check
+      expect(console.log).toHaveBeenCalledWith('Fuzz')
+      expect(console.log).toHaveBeenCalledWith('')
+      expect(console.log).toHaveBeenCalledWith('Buzz')
+      expect(console.log).toHaveBeenCalledWith('FuzzBuzz')
     });
   });
 });

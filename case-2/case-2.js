@@ -1,11 +1,13 @@
-function toUpperCase(str) {
+// Task: Restore code of the functions by reading unit tests
+
+export function toUpperCase(str) {
   // TODO Implement code
 }
 
-function isTooBig(num) {
+export function isTooBig(num) {
   // TODO Implement code
 }
 
-function fuzBuzz(arr) {
+export function fuzzBuzz (arr) {
   // TODO Implement code
 }
