@@ -1,7 +1,7 @@
 import { div, sum } from './helper';
 import { message, toUpperCase } from './helper2';
 
-//Task: Assume that for some reason we cannot launch functions from "helper" and "helper2".
+// Task: Assume that for some reason we cannot launch functions from "helper" and "helper2".
 // Mock that functions and test the code.
 
 export function main(a, b) {

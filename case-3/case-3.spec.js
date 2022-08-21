@@ -5,7 +5,7 @@ import * as Helper2 from './helper2'
 describe('Case 3', () => {
 
   describe('main', () => {
-    it('should return 5 if sum returns 4 and div returns 1', () => {
+    it('should return 5 if "sum()" returns 4 and "div()" returns 1', () => {
       // setup
       jest.spyOn(Helper, 'sum', ).mockImplementation((a, b) => 4)
       jest.spyOn(Helper, 'div', ).mockImplementation((a, b) => 1)
