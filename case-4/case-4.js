@@ -1,5 +1,5 @@
-// Task: create unit tests for "sum" and for "div".
-// hint: "div" might be hard to test, so it should be rewritten.
+// Task: create unit tests for "sum()" and for "div()" functions.
+// hint: "div()" might be hard to test, so it should be rewritten.
 
 export class Case4 {
   a = 0;
